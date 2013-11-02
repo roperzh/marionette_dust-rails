@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = MarionetteDust::VERSION
   spec.authors       = ["RobertoDip"]
   spec.email         = ["dip.jesusr@gmail.com"]
-  spec.description   = %q{asdfasdf}
-  spec.summary       = %q{asdfasdf}
+  spec.description   = %q{An easy way to get Marionette.js and Dust.js working together with the asset pipeline}
+  spec.summary       = %q{Get up Marionette and Dust in seconds}
   spec.homepage      = "https://github.com/RobertoDip/marionette_dust-rails"
   spec.license       = "MIT"
 
