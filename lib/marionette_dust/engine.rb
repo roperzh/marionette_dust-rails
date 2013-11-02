@@ -1,3 +1,3 @@
-module Foundation
+module MarionetteDust
   class Engine < Rails::Engine; end
 end

@@ -1,6 +1,6 @@
 require "marionette_dust/version"
 
 module MarionetteDust
-  class Engine < Rails::Engine
-  end
+
+  require "marionette_dust/engine" if defined?(Rails::Engine)
 end
