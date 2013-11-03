@@ -1,3 +1,5 @@
+[![Build Status][BS img]][Build Status]
+
 # MarionetteDust
 
 TODO: Write a gem description
@@ -27,3 +29,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+[Build Status]: https://travis-ci.org/RobertoDip/marionette_dust-rails
+
+[BS img]: https://travis-ci.org/RobertoDip/marionette_dust-rails.png
