@@ -44,7 +44,7 @@ module MarionetteDust
           empty_directory File.join(apps_path, file_name.downcase, submodule.downcase)
           create_marionette_view
           create_marionette_controller
-          # create_dust_template
+          create_dust_template
         end
       end
 
@@ -60,11 +60,11 @@ module MarionetteDust
         template "controller#{@ext}", file
       end
 
-      # def create_dust_template(submodule_name.downcase)
-      #   empty_directory File.join(template_path, submodule_name.downcase)
-      #   file = File.join(template_path, submodule_name.downcase, "#{submodule_name.downcase}.jst.dust")
-      #   template "template.jst.dust", file
-      # end
+      def create_dust_template
+        empty_directory File.join(template_path, file_name.downcase, @submodule_name.downcase)
+        file = File.join(template_path, file_name.downcase, @submodule_name.downcase, "#{@submodule_name.downcase}.jst.dust")
+        template "template.jst.dust", file
+      end
     end
   end
 end

@@ -27,12 +27,13 @@ module MarionetteDust
         @ext            = js ? ".js.coffee" : ".js"
         @parent_name    = options.parent
         @submodule_name = file_name
+        puts "#{@parent_name}"
       end
 
       def create_subapp
         create_marionette_view
         create_marionette_controller
-        # create_dust_template
+        create_dust_template
       end
 
       protected
@@ -46,11 +47,11 @@ module MarionetteDust
         template "controller#{@ext}", file
       end
 
-      # def create_dust_template(sub@parent_name)
-      #   empty_directory File.join(template_path, subparent_name)
-      #   file = File.join(template_path, subparent_name, "#{subparent_name}.jst.dust")
-      #   template "template.jst.dust", file
-      # end
+      def create_dust_template
+        empty_directory File.join(template_path, @parent_name, @submodule_name)
+        file = File.join(template_path, @parent_name, @submodule_name, "#{@submodule_name}.jst.dust")
+        template "template.jst.dust", file
+      end
     end
   end
 end
