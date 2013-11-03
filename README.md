@@ -1,3 +1,4 @@
+[![Dependency Status][GM img]][Gemnasium]
 [![Build Status][BS img]][Build Status]
 [![Code Climate][CC img]][Code Climate]
 
@@ -34,6 +35,8 @@ TODO: Write usage instructions here
 
 [Build Status]: https://travis-ci.org/RobertoDip/marionette_dust-rails
 [Code Climate]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails
+[Gemnasium]: https://gemnasium.com/RobertoDip/marionette_dust-rails
 
 [BS img]: https://travis-ci.org/RobertoDip/marionette_dust-rails.png
 [CC img]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails.png
+[GM img]: https://gemnasium.com/RobertoDip/marionette_dust-rails.png
