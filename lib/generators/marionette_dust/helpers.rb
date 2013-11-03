@@ -30,32 +30,28 @@ module MarionetteDust
         "#{file_name.pluralize}#{@ext}"
       end
 
-      def router_file_name
-        "#{file_name.pluralize}_router#{@ext}"
+      def view_file_name(option)
+        "#{option.singularize}_view#{@ext}"
       end
 
-      def view_file_name
-        "#{file_name.pluralize}_index#{@ext}"
+      def controller_file_name(option)
+        "#{option.singularize}_controller#{@ext}"
       end
 
-      def model_namespace
-        [app_name, "Models", file_name.singularize.camelize].join(".")
+      def singular_entity_name
+        file_name.singularize.camelize
       end
 
-      def collection_namespace
-        [app_name, "Collections", file_name.pluralize.camelize].join(".")
+      def plural_entity_name
+        file_name.pluralize.camelize
       end
 
-      def router_namespace
-        [app_name, "Routers", file_name.pluralize.camelize].join(".")
+      def sub_app_name
+        [file_name.pluralize.camelize, "App"].join("")
       end
 
-      def view_namespace
-        [app_name, "Views", "#{file_name.pluralize.camelize}Index"].join(".")
-      end
-
-      def template_namespace
-        File.join(file_path.pluralize, "index")
+      def sub_app_file_name
+        [file_name.singularize.downcase, "_app", "#{@ext}"].join("")
       end
 
       def app_name
