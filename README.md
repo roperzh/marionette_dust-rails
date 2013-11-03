@@ -1,4 +1,6 @@
 [![Build Status][BS img]][Build Status]
+[![Code Climate][CC img]][Code Climate]
+
 
 # MarionetteDust
 
@@ -31,5 +33,7 @@ TODO: Write usage instructions here
 5. Create new Pull Request
 
 [Build Status]: https://travis-ci.org/RobertoDip/marionette_dust-rails
+[Code Climate]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails
 
 [BS img]: https://travis-ci.org/RobertoDip/marionette_dust-rails.png
+[CC img]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails.png
