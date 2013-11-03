@@ -6,7 +6,7 @@ module MarionetteDust
       include MarionetteDust::Generators::Helpers
       include Thor::Actions
 
-      source_root File.expand_path("../../scaffold/templates", __FILE__)
+      source_root File.expand_path("../../common/templates", __FILE__)
 
       desc "Generates a Marionette.js resource scaffold"
 
@@ -31,20 +31,15 @@ module MarionetteDust
       end
 
       def create_subapp
-        create_marionette_view
-        create_marionette_controller
+        create_asset("view")
+        create_asset("controller")
         create_dust_template
       end
 
       protected
-      def create_marionette_view
-        file = File.join(apps_path, @parent_name.downcase, file_name, view_file_name(file_name))
-        template "view#{@ext}", file
-      end
-
-      def create_marionette_controller
-        file = File.join(apps_path, @parent_name.downcase, file_name, controller_file_name(file_name))
-        template "controller#{@ext}", file
+      def create_asset(type)
+        file = File.join(apps_path, @parent_name.downcase, file_name, asset_file_name(type))
+        template "#{type}#{@ext}", file
       end
 
       def create_dust_template

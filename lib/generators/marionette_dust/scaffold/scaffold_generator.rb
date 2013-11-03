@@ -5,7 +5,7 @@ module MarionetteDust
     class ScaffoldGenerator < Rails::Generators::NamedBase
       include MarionetteDust::Generators::Helpers
 
-      source_root File.expand_path("../templates", __FILE__)
+      source_root File.expand_path("../../common/templates", __FILE__)
 
       desc "Generates a Marionette.js resource scaffold"
 
@@ -42,22 +42,16 @@ module MarionetteDust
         for submodule in options.submodule
           @submodule_name = submodule
           empty_directory File.join(apps_path, file_name.downcase, submodule.downcase)
-          create_marionette_view
-          create_marionette_controller
+          create_asset("view")
+          create_asset("controller")
           create_dust_template
         end
       end
 
       protected
-
-      def create_marionette_view
-        file = File.join(apps_path, file_name.downcase, @submodule_name.downcase, view_file_name(@submodule_name.downcase))
-        template "view#{@ext}", file
-      end
-
-      def create_marionette_controller
-        file = File.join(apps_path, file_name.downcase, @submodule_name.downcase, controller_file_name(@submodule_name.downcase))
-        template "controller#{@ext}", file
+      def create_asset(type)
+        file = File.join(apps_path, file_name.downcase, @submodule_name.downcase, asset_file_name(type))
+        template "#{type}#{@ext}", file
       end
 
       def create_dust_template

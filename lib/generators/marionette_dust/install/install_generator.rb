@@ -32,7 +32,7 @@ module MarionetteDust
         template "app#{ext}", "#{javascript_path}/app#{ext}"
       end
 
-      def inject_backbone
+      def inject_required_files
         manifest = File.join(javascript_path, options.manifest)
         libs = %w(marionette_dust)
         paths = %w(../templates ./entities ./apps)

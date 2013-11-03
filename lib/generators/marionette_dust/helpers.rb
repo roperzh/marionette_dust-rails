@@ -30,12 +30,8 @@ module MarionetteDust
         "#{file_name.pluralize}#{@ext}"
       end
 
-      def view_file_name(option)
-        "#{option.singularize}_view#{@ext}"
-      end
-
-      def controller_file_name(option)
-        "#{option.singularize}_controller#{@ext}"
+      def asset_file_name(type)
+        "#{@submodule_name.downcase.singularize}_#{type}#{@ext}"
       end
 
       def singular_entity_name
