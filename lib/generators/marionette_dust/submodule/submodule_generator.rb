@@ -23,28 +23,30 @@ module MarionetteDust
                     desc: "Parent app (required)"
 
       def parse_options
-        js = options.javascript
-        @ext = js ? ".js.coffee" : ".js"
+        js              = options.javascript
+        @ext            = js ? ".js.coffee" : ".js"
+        @parent_name    = options.parent
+        @submodule_name = file_name
       end
 
       def create_subapp
-        # create_marionette_view(options.parent)
-        create_marionette_controller(options.parent)
-        # create_dust_template(options.parent)
+        create_marionette_view
+        create_marionette_controller
+        # create_dust_template
       end
 
       protected
-      def create_marionette_view(parent_name)
-        file = File.join(apps_path, parent_name.pluralize, file_name, view_file_name(file_name))
+      def create_marionette_view
+        file = File.join(apps_path, @parent_name.downcase, file_name, view_file_name(file_name))
         template "view#{@ext}", file
       end
 
-      def create_marionette_controller(parent_name)
-        file = File.join(apps_path, parent_name.pluralize, file_name, controller_file_name(file_name))
+      def create_marionette_controller
+        file = File.join(apps_path, @parent_name.downcase, file_name, controller_file_name(file_name))
         template "controller#{@ext}", file
       end
 
-      # def create_dust_template(subparent_name)
+      # def create_dust_template(sub@parent_name)
       #   empty_directory File.join(template_path, subparent_name)
       #   file = File.join(template_path, subparent_name, "#{subparent_name}.jst.dust")
       #   template "template.jst.dust", file

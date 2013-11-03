@@ -54,6 +54,10 @@ module MarionetteDust
         [file_name.singularize.downcase, "_app", "#{@ext}"].join("")
       end
 
+      def sub_app_scope
+        @submodule_name.capitalize
+      end
+
       def app_name
         rails_app_name.camelize
       end
