@@ -34,12 +34,11 @@ module MarionetteDust
 
       def inject_required_files
         manifest = File.join(javascript_path, options.manifest)
-        libs = %w(marionette_dust)
-        paths = %w(../templates ./entities ./apps)
+        libs = %w(marionette_dust app)
+        paths = %w(./apps ./entities ../templates)
 
         out = []
         out << libs.map{ |lib| "//= require #{lib}" }
-        out << "//= require #{app_filename}"
         out << paths.map{ |path| "//= require_tree #{path}" }
         out = out.join("\n") + "\n"
 
