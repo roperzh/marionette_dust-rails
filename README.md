@@ -100,6 +100,8 @@ Contributing
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/0fcf36aa176a3fc30ebbec87bf7b28d2 "githalytics.com")](http://githalytics.com/RobertoDip/marionette_dust-rails)
+
 [1]: http://marionettejs.com/
 [2]: http://linkedin.github.io/dustjs/
 [3]: https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.application.module.md
