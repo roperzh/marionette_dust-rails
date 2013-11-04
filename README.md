@@ -1,3 +1,4 @@
+[![Gem Version][GV img]][Gem Version]
 [![Dependency Status][GM img]][Gemnasium]
 [![Build Status][BS img]][Build Status]
 [![Code Climate][CC img]][Code Climate]
@@ -108,7 +109,9 @@ Contributing
 [Build Status]: https://travis-ci.org/RobertoDip/marionette_dust-rails
 [Code Climate]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails
 [Gemnasium]: https://gemnasium.com/RobertoDip/marionette_dust-rails
+[Gem Version]: https://rubygems.org/gems/marionette_dust
 
 [BS img]: https://travis-ci.org/RobertoDip/marionette_dust-rails.png
 [CC img]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails.png
 [GM img]: https://gemnasium.com/RobertoDip/marionette_dust-rails.png
+[GV img]: https://badge.fury.io/rb/marionette_dust.png
