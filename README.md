@@ -12,7 +12,7 @@ Installation
 -------
 
 
-Add marionette_dust in your gemfile:
+Add marionette_dust to your gemfile:
 
 ```ruby
 gem 'marionette_dust'
@@ -42,7 +42,7 @@ app/
 
 Generators
 -------
-All generators are based on [marionette modules][3], the original idea is described in the exellent book [Backbone.Marionette.js: A Gentle Introduction][4], and the all credits go to [BackboneRails.com][5]
+All generators are based on [marionette modules][3], the original idea is described in the excellent book [Backbone.Marionette.js: A Gentle Introduction][4], and the all credits go to [BackboneRails.com][5]
 
 - **Scaffold**
 
