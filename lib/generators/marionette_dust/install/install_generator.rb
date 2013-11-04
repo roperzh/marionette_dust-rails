@@ -23,6 +23,7 @@ module MarionetteDust
 
       def create_dir_layout
         empty_directory entities_path
+        empty_directory template_path
         empty_directory apps_path
       end
 

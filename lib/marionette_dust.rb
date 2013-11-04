@@ -8,6 +8,6 @@ module MarionetteDust
   require "marionette_dust/engine" if defined?(Rails::Engine)
 
   def self.path
-    File.expand_path("../../vendor/assets/javascripts", __FILE__)
+    File.expand_path("../../vendor/assets/javascripts/marionette_dust/", __FILE__)
   end
 end

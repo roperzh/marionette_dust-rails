@@ -1,3 +1,4 @@
+var JST = JST || {}
 left = Object.keys(JST);
 
 while (left.length > 0) {

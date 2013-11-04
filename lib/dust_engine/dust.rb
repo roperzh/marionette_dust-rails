@@ -19,7 +19,7 @@ module MarionetteDust
       end
 
       def path
-        @path ||= assets_path.join('dust.js')
+        @path ||= assets_path.join('dust-full-2.1.0.js')
       end
 
       def assets_path
