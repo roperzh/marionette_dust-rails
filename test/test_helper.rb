@@ -18,4 +18,4 @@ module Rails
 end
 Rails.application.config.root = Rails.root
 
-require 'generators/marionette_dust/install/install_generator'
+require 'generators/md/install/install_generator'

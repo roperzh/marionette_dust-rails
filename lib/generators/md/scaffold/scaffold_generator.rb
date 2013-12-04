@@ -1,6 +1,6 @@
-require 'generators/marionette_dust/helpers'
+require 'generators/md/helpers'
 
-module MarionetteDust
+module Md
   module Generators
     class ScaffoldGenerator < Rails::Generators::NamedBase
       include MarionetteDust::Generators::Helpers

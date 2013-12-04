@@ -1,6 +1,6 @@
-require 'generators/marionette_dust/helpers'
+require 'generators/md/helpers'
 
-module MarionetteDust
+module Md
   module Generators
     class InstallGenerator < Rails::Generators::Base
       include MarionetteDust::Generators::Helpers

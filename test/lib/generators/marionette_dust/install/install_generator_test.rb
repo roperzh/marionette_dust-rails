@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class InstallGeneratorTest < Rails::Generators::TestCase
-  tests MarionetteDust::Generators::InstallGenerator
+  tests Md::Generators::InstallGenerator
   destination File.expand_path("../templates", __FILE__)
 
   test "creates the folder structure" do
