@@ -4,8 +4,8 @@ require 'pathname'
 module MarionetteDust
   class Dust
     class << self
-      def precompile(source, name)
-        context.call('dust.compile', source, name)
+      def precompile(src, name)
+        context.call('dust.compile', src, name)
       end
 
       private
@@ -15,11 +15,11 @@ module MarionetteDust
       end
 
       def source
-        @source ||= path.read
+        @source ||= open(path).read
       end
 
       def path
-        @path ||= assets_path.join('dust-full-2.1.0.js')
+        @path ||= assets_path.join('dust-full-2.2.2.js')
       end
 
       def assets_path
