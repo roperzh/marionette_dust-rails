@@ -104,7 +104,7 @@ Also this project is inspired by:
 
 [Backbone on rails][7] and [Dust assets][6]
 
-
+Special thanks to [@sauron][8] for making the test suite possible
 
 Contributing
 -------
@@ -124,6 +124,7 @@ Contributing
 [5]: http://www.backbonerails.com/
 [6]: https://github.com/hasmanydevelopers/dust_assets
 [7]: https://github.com/meleyal/backbone-on-rails
+[8]: https://github.com/sauron
 
 [Build Status]: https://travis-ci.org/RobertoDip/marionette_dust-rails
 [Code Climate]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails
