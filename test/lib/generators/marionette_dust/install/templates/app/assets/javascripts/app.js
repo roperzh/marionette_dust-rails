@@ -17,4 +17,9 @@ Class.getCurrentRoute = function () {
 
 Class.on('initialize:after', function () {
   //Things to do after app initialize
+  if (Backbone.history) {
+    Backbone.history.start({
+      pushState: true
+    });
+  }
 });
