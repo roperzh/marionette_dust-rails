@@ -19,3 +19,5 @@ end
 Rails.application.config.root = Rails.root
 
 require 'generators/md/install/install_generator'
+require 'generators/md/scaffold/scaffold_generator'
+require 'generators/md/submodule/submodule_generator'
