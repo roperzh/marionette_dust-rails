@@ -26,7 +26,7 @@ $ bundle install
 Initialize your app with:
 
 ```
-$ rails generate marionette_dust:install
+$ rails generate md:install
 ```
 
 This adds `//= require marionette_dust` in your application.js manifest and generates the basic scaffold for your marionette application:
@@ -40,6 +40,8 @@ app/
         └── app.js
 ```
 
+You can past an optional argument ( -c ) if you want coffeescript files.
+
 Generators
 -------
 All generators are based on [marionette modules][3], the original idea is described in the excellent book [Backbone.Marionette.js: A Gentle Introduction][4], and the all credits go to [BackboneRails.com][5]
@@ -49,7 +51,7 @@ All generators are based on [marionette modules][3], the original idea is descri
     Generates a scaffold for a sub-app, under apps folder, running:
 
     ```
-    $ rails generate marionette_dust:scaffold Foo
+    $ rails generate md:scaffold Foo [-c]
     ```
 
     will generate:
@@ -69,7 +71,7 @@ app/
     Generates a submodule under an existent app (previously generated with the Scaffold generator), running:
 
     ```
-    $ rails generate marionette_dust:submodule bar --parent foo
+    $ rails generate md:submodule bar --parent foo [-c]
     ```
 
     will generate:
@@ -91,6 +93,19 @@ app/
                     └── bar.jst.dust
 ```
 
+About
+-------
+This version includes:
+
+ * Marionette.js v1.2.2
+ * Dust.js v2.2.2
+
+Also this project is inspired by:
+
+[Backbone on rails][7] and [Dust assets][6]
+
+
+
 Contributing
 -------
 
@@ -107,6 +122,8 @@ Contributing
 [3]: https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.application.module.md
 [4]: https://leanpub.com/marionette-gentle-introduction
 [5]: http://www.backbonerails.com/
+[6]: https://github.com/hasmanydevelopers/dust_assets
+[7]: https://github.com/meleyal/backbone-on-rails
 
 [Build Status]: https://travis-ci.org/RobertoDip/marionette_dust-rails
 [Code Climate]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails
