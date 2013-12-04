@@ -18,4 +18,11 @@ class SubmoduleGeneratorTest < Rails::Generators::TestCase
     assert_file "app/assets/javascripts/apps/foo/bar/bar_view.js"
     assert_file "app/assets/javascripts/apps/foo/bar/bar_controller.js"
   end
+
+  test "creates the submodule application with coffeescript files if required" do
+    run_generator %w(bar --parent foo -c)
+
+    assert_file "app/assets/javascripts/apps/foo/bar/bar_view.js.coffee"
+    assert_file "app/assets/javascripts/apps/foo/bar/bar_controller.js.coffee"
+  end
 end

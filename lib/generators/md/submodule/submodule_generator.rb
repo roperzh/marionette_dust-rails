@@ -23,11 +23,10 @@ module Md
                     desc: "Parent app (required)"
 
       def parse_options
-        js              = options.javascript
-        @ext            = js ? ".js.coffee" : ".js"
+        coffee          = options.coffeescript
+        @ext            = coffee ? ".js.coffee" : ".js"
         @parent_name    = options.parent
         @submodule_name = file_name
-        puts "#{@parent_name}"
       end
 
       def create_subapp

@@ -22,8 +22,8 @@ module Md
                     desc: ""
 
       def parse_options
-        js = options.javascript
-        @ext = js ? ".js.coffee" : ".js"
+        coffee = options.coffeescript
+        @ext = coffee ? ".js.coffee" : ".js"
       end
 
       def create_marionette_entity
@@ -34,7 +34,7 @@ module Md
       def create_marionette_app
         empty_directory File.join(apps_path, file_name.downcase)
         file = File.join(apps_path, file_name.downcase, sub_app_file_name)
-        template "app.js", file
+        template "app#{@ext}", file
       end
 
       def create_subapp

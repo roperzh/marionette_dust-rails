@@ -10,7 +10,7 @@ class ScaffoldGeneratorTest < Rails::Generators::TestCase
     assert_directory "app/assets/javascripts/apps/test"
   end
 
-  test "creates the sub application" do
+  test "creates the sub application file" do
     run_generator %w(test)
 
     assert_file "app/assets/javascripts/apps/test/test_app.js"
@@ -20,5 +20,17 @@ class ScaffoldGeneratorTest < Rails::Generators::TestCase
     run_generator %w(test)
 
     assert_file "app/assets/javascripts/entities/test.js"
+  end
+
+  test "creates coffeescript sub application file if requried" do
+    run_generator %w(test -c)
+
+    assert_file "app/assets/javascripts/apps/test/test_app.js.coffee"
+  end
+
+  test "creates coffeescript entities file if required" do
+    run_generator %w(test -c)
+
+    assert_file "app/assets/javascripts/entities/test.js.coffee"
   end
 end
