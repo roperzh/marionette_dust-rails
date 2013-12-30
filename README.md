@@ -135,3 +135,5 @@ Contributing
 [CC img]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails.png
 [GM img]: https://gemnasium.com/RobertoDip/marionette_dust-rails.png
 [GV img]: https://badge.fury.io/rb/marionette_dust.png
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/RobertoDip/marionette_dust-rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
