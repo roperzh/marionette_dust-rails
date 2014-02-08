@@ -8,7 +8,7 @@ module MarionetteDust
         context.call('dust.compile', src, name)
       end
 
-      private
+    private
 
       def context
         @context ||= ExecJS.compile(source)
