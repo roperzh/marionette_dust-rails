@@ -115,7 +115,7 @@ Contributing
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/0fcf36aa176a3fc30ebbec87bf7b28d2 "githalytics.com")](http://githalytics.com/RobertoDip/marionette_dust-rails)
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/0fcf36aa176a3fc30ebbec87bf7b28d2 "githalytics.com")](http://githalytics.com/roperzh/marionette_dust-rails)
 
 [1]: http://marionettejs.com/
 [2]: http://linkedin.github.io/dustjs/
@@ -126,14 +126,14 @@ Contributing
 [7]: https://github.com/meleyal/backbone-on-rails
 [8]: https://github.com/sauron
 
-[Build Status]: https://travis-ci.org/RobertoDip/marionette_dust-rails
-[Code Climate]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails
-[Gemnasium]: https://gemnasium.com/RobertoDip/marionette_dust-rails
+[Build Status]: https://travis-ci.org/roperzh/marionette_dust-rails
+[Code Climate]: https://codeclimate.com/github/roperzh/marionette_dust-rails
+[Gemnasium]: https://gemnasium.com/roperzh/marionette_dust-rails
 [Gem Version]: https://rubygems.org/gems/marionette_dust
 
-[BS img]: https://travis-ci.org/RobertoDip/marionette_dust-rails.png
-[CC img]: https://codeclimate.com/github/RobertoDip/marionette_dust-rails.png
-[GM img]: https://gemnasium.com/RobertoDip/marionette_dust-rails.png
+[BS img]: https://travis-ci.org/roperzh/marionette_dust-rails.png
+[CC img]: https://codeclimate.com/github/roperzh/marionette_dust-rails.png
+[GM img]: https://gemnasium.com/roperzh/marionette_dust-rails.png
 [GV img]: https://badge.fury.io/rb/marionette_dust.png
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/RobertoDip/marionette_dust-rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/roperzh/marionette_dust-rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
