@@ -51,7 +51,7 @@ module MarionetteDust
       end
 
       def sub_app_scope
-        @submodule_name.capitalize
+        @submodule_name.camelize
       end
 
       def extension

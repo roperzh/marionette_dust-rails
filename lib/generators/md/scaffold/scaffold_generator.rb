@@ -43,7 +43,7 @@ module Md
         end
       end
 
-      protected
+    protected
       def create_asset(type)
         file = File.join(apps_path, file_name.downcase, @submodule_name.downcase, asset_file_name(type))
         template "#{type}#{extension}", file

@@ -33,15 +33,21 @@ module Md
         create_dust_template
       end
 
-      protected
+    protected
       def create_asset(type)
-        file = File.join(apps_path, @parent_name.downcase, file_name, asset_file_name(type))
+        file = File.join(apps_path, @parent_name.underscore, file_name,
+          asset_file_name(type))
+
         template "#{type}#{extension}", file
       end
 
       def create_dust_template
-        empty_directory File.join(template_path, @parent_name, @submodule_name)
-        file = File.join(template_path, @parent_name, @submodule_name, "#{@submodule_name}.jst.dust")
+        empty_directory File.join(template_path, @parent_name.underscore,
+          @submodule_name.underscore)
+
+        file = File.join(template_path, @parent_name.underscore, @submodule_name,
+          "#{@submodule_name}.jst.dust")
+
         template "template.jst.dust", file
       end
     end

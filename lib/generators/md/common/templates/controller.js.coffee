@@ -1,2 +1,2 @@
-<%= app_name %>.module "<%= file_name.capitalize %>.<%= sub_app_scope %>", (<%= sub_app_scope %>, <%= app_name %>, Backbone, Marionette, $, _) ->
+<%= app_name %>.module "<%= @parent_name.camelize %>.<%= file_name.camelize %>", (<%= sub_app_scope %>, <%= app_name %>, Backbone, Marionette, $, _) ->
   <%= sub_app_scope %>.Controller = {}
