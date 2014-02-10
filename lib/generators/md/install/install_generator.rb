@@ -22,15 +22,13 @@ module Md
                     desc: "Javascript manifest file to modify (or create)"
 
       def create_dir_layout
-        empty_directory entities_path
-        empty_directory template_path
-        empty_directory apps_path
+        trackeable_directory entities_path
+        trackeable_directory template_path
+        trackeable_directory apps_path
       end
 
       def create_app_file
-        coffee = options.coffeescript
-        ext = coffee ? ".js.coffee" : ".js"
-        template "app#{ext}", "#{javascript_path}/app#{ext}"
+        template "app#{extension}", "#{javascript_path}/app#{extension}"
       end
 
       def inject_required_files

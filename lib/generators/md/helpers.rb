@@ -23,15 +23,15 @@ module MarionetteDust
       end
 
       def singular_file_name
-        "#{file_name.singularize}#{@ext}"
+        "#{file_name.singularize}#{extension}"
       end
 
       def plural_file_name
-        "#{file_name.pluralize}#{@ext}"
+        "#{file_name.pluralize}#{extension}"
       end
 
       def asset_file_name(type)
-        "#{@submodule_name.downcase.singularize}_#{type}#{@ext}"
+        "#{@submodule_name.downcase.singularize}_#{type}#{extension}"
       end
 
       def singular_entity_name
@@ -47,25 +47,29 @@ module MarionetteDust
       end
 
       def sub_app_file_name
-        [file_name.singularize.downcase, "_app", "#{@ext}"].join("")
+        [file_name.singularize.downcase, "_app", "#{extension}"].join("")
       end
 
       def sub_app_scope
         @submodule_name.capitalize
       end
 
-      def app_name
-        rails_app_name.camelize
+      def extension
+        @ext ||= options.coffeescript ? ".js.coffee" : ".js"
       end
 
-      def app_filename
-        rails_app_name.underscore
+      def app_name
+        rails_app_name.camelize
       end
 
       def rails_app_name
         Rails.application.class.name.split('::').first
       end
 
+      def trackeable_directory(path)
+        empty_directory path
+        template ".gitkeep", "#{path}/.gitkeep"
+      end
     end
   end
 end

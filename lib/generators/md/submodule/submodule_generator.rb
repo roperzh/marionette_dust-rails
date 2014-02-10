@@ -23,8 +23,6 @@ module Md
                     desc: "Parent app (required)"
 
       def parse_options
-        coffee          = options.coffeescript
-        @ext            = coffee ? ".js.coffee" : ".js"
         @parent_name    = options.parent
         @submodule_name = file_name
       end
@@ -38,7 +36,7 @@ module Md
       protected
       def create_asset(type)
         file = File.join(apps_path, @parent_name.downcase, file_name, asset_file_name(type))
-        template "#{type}#{@ext}", file
+        template "#{type}#{extension}", file
       end
 
       def create_dust_template

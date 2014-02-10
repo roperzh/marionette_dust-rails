@@ -21,20 +21,15 @@ module Md
                     default: "",
                     desc: ""
 
-      def parse_options
-        coffee = options.coffeescript
-        @ext = coffee ? ".js.coffee" : ".js"
-      end
-
       def create_marionette_entity
         file = File.join(entities_path, singular_file_name)
-        template "entity#{@ext}", file
+        template "entity#{extension}", file
       end
 
       def create_marionette_app
         empty_directory File.join(apps_path, file_name.downcase)
         file = File.join(apps_path, file_name.downcase, sub_app_file_name)
-        template "app#{@ext}", file
+        template "app#{extension}", file
       end
 
       def create_subapp
@@ -51,7 +46,7 @@ module Md
       protected
       def create_asset(type)
         file = File.join(apps_path, file_name.downcase, @submodule_name.downcase, asset_file_name(type))
-        template "#{type}#{@ext}", file
+        template "#{type}#{extension}", file
       end
 
       def create_dust_template
