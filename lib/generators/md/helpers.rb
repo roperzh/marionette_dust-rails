@@ -43,7 +43,7 @@ module MarionetteDust
       end
 
       def sub_app_name
-        [file_name.pluralize.camelize, "App"].join("")
+        [file_name.camelize, "App"].join("")
       end
 
       def sub_app_file_name
