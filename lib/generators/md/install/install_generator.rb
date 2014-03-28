@@ -34,7 +34,7 @@ module Md
       def inject_required_files
         manifest = File.join(javascript_path, options.manifest)
         libs = %w(marionette_dust app)
-        paths = %w(./apps ./entities ../templates)
+        paths = %w(../templates ./apps ./entities)
 
         out = []
         out << libs.map{ |lib| "//= require #{lib}" }

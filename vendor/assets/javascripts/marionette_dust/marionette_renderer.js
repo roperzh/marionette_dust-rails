@@ -1,11 +1,17 @@
-Backbone.Marionette.Renderer.render = function (template, data) {
+Backbone.Marionette.Renderer.render = function (templateName, data) {
   var renderedTemplate;
 
-  if (!JST[template]) throw "Template '" + template + "' not found!";
-
-  JST[template](data, function (err, out) {
+  var callback = function renderCallback(err, out) {
     renderedTemplate = out;
-  });
+  };
+
+  if (dust.cache[templateName]) {
+    dust.render(templateName, data, callback);
+  } else if (JST && JST[templateName]) {
+    JST[templateName](data, callback);
+  } else {
+    throw "Template '" + templateName + "' not found!";
+  }
 
   return renderedTemplate;
 };
