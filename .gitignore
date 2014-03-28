@@ -15,3 +15,6 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+/test/lib/generators/marionette_dust/install/templates/app/assets/javascripts/apps/.gitkeep
+/test/lib/generators/marionette_dust/install/templates/app/assets/javascripts/entities/.gitkeep
+/test/lib/generators/marionette_dust/install/templates/app/assets/templates/.gitkeep
