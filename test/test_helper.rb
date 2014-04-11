@@ -18,6 +18,14 @@ module Rails
 end
 Rails.application.config.root = Rails.root
 
+class MockAsset
+  def logical_path
+    "templates/hello"
+  end
+end
+
 require 'generators/md/install/install_generator'
 require 'generators/md/scaffold/scaffold_generator'
 require 'generators/md/submodule/submodule_generator'
+require 'dust_engine/dust'
+require 'dust_engine/tilt_dust'

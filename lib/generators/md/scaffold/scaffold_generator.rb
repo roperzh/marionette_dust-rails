@@ -51,8 +51,8 @@ module Md
 
       def create_dust_template
         empty_directory File.join(template_path, file_name.downcase, @submodule_name.downcase)
-        file = File.join(template_path, file_name.downcase, @submodule_name.downcase, "#{@submodule_name.downcase}.jst.dust")
-        template "template.jst.dust", file
+        file = File.join(template_path, file_name.downcase, @submodule_name.downcase, "#{@submodule_name.downcase}.dust")
+        template "template.dust", file
       end
     end
   end

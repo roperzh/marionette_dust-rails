@@ -46,9 +46,9 @@ module Md
           @submodule_name.underscore)
 
         file = File.join(template_path, @parent_name.underscore, @submodule_name,
-          "#{@submodule_name}.jst.dust")
+          "#{@submodule_name}.dust")
 
-        template "template.jst.dust", file
+        template "template.dust", file
       end
     end
   end
